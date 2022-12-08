@@ -28,7 +28,7 @@ function Home(props) {
                 width={['95%', '500px', '650px', '700px']}
                 height={['60%', '450px', '450px', '500px']}
                 borderRadius='5px'
-                mt={['30px']}
+                mt={['20px','30px']}
                 flexDirection='column'
                 textAlign='center'
                 justifyContent='center'
