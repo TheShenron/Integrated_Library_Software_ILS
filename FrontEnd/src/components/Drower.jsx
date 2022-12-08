@@ -30,11 +30,11 @@ function Drower(props) {
                     <DrawerBody p='0'>
 
                         <Flex flexDirection='column'>
-                            <NavLink onClick={onClose} to='/'><Box borderTop='1px solid' borderColor="gray.100" p='15px 30px'>  Home </Box> </NavLink> 
-                            <NavLink onClick={onClose} to='/books' > <Box borderTop='1px solid' borderColor="gray.100" p='15px 30px'>  Books </Box> </NavLink>
-                            <NavLink onClick={onClose} to='/about' > <Box borderTop='1px solid' borderColor="gray.100" p='15px 30px'>  About </Box> </NavLink>
-                            <NavLink onClick={onClose} to='/career' > <Box borderTop='1px solid' borderColor="gray.100" p='15px 30px'>  Career </Box> </NavLink>
-                            <NavLink onClick={onClose} to='/user' > <Box border='1px solid' borderColor='gray.100' p='15px 30px'>  User </Box> </NavLink>
+                            <Link _activeLink={{color:"red"}} as={NavLink} onClick={onClose} to='/'><Box borderTop='1px solid' borderColor="gray.100" p='15px 30px'>  Home </Box> </Link> 
+                            <Link as={NavLink} _activeLink={{color:"red"}} onClick={onClose} to='/books' > <Box borderTop='1px solid' borderColor="gray.100" p='15px 30px'>  Books </Box> </Link>
+                            <Link as={NavLink} _activeLink={{color:"red"}} onClick={onClose} to='/about' > <Box borderTop='1px solid' borderColor="gray.100" p='15px 30px'>  About </Box> </Link>
+                            <Link as={NavLink} _activeLink={{color:"red"}} onClick={onClose} to='/career' > <Box borderTop='1px solid' borderColor="gray.100" p='15px 30px'>  Career </Box> </Link>
+                            <Link as={NavLink} _activeLink={{color:"red"}} onClick={onClose} to='/user' > <Box border='1px solid' borderColor='gray.100' p='15px 30px'>  User </Box> </Link>
                         </Flex>
 
                     </DrawerBody>
