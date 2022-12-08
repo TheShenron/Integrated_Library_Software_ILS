@@ -1,6 +1,6 @@
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, Menu, MenuButton, MenuList, Button, Box } from '@chakra-ui/react';
 import React from 'react';
-import { useLocation } from 'react-router-dom'
+import {NavLink ,useLocation } from 'react-router-dom'
 
 
 
@@ -16,14 +16,14 @@ const Bcrumb = ({ paths }) => {
         if (splitPath[x] === "") {
             pathArr.push(
                 <BreadcrumbItem key={x+"crumb"}>
-                    <BreadcrumbLink href={genURL}>Home</BreadcrumbLink>
+                    <BreadcrumbLink as={NavLink} to={genURL}>Home</BreadcrumbLink>
                 </BreadcrumbItem>
             )
         } else if (x === splitPath.length - 1) {
             genURL += splitPath[x]
             pathArr.push(
                 <BreadcrumbItem isCurrentPage key={x+"crumb"}> 
-                    <BreadcrumbLink href={genURL}> {splitPath[x].split("").map((el,ind)=> ind === 0 ? el.toUpperCase() : el).join("")} </BreadcrumbLink>
+                    <BreadcrumbLink as={NavLink} to={genURL}> {splitPath[x].split("").map((el,ind)=> ind === 0 ? el.toUpperCase() : el).join("")} </BreadcrumbLink>
                 </BreadcrumbItem>
             )
 
@@ -31,7 +31,7 @@ const Bcrumb = ({ paths }) => {
             genURL += splitPath[x]
             pathArr.push(
                 <BreadcrumbItem key={x+"crumb"}>
-                    <BreadcrumbLink href={genURL}> {splitPath[x].split("").map((el,ind)=> ind === 0 ? el.toUpperCase() : el).join("")} </BreadcrumbLink>
+                    <BreadcrumbLink as={NavLink} to={genURL}> {splitPath[x].split("").map((el,ind)=> ind === 0 ? el.toUpperCase() : el).join("")} </BreadcrumbLink>
                 </BreadcrumbItem>
             )
         }
@@ -40,7 +40,7 @@ const Bcrumb = ({ paths }) => {
 
 
     return <>
-        <Breadcrumb border='1px solid' borderColor='gray.100' w='min-content' p='5px 10px'>
+        <Breadcrumb border='1px solid' borderColor='gray.100' w='min-content' p='5px 10px' background='white'>
             
             {pathArr}
 
@@ -58,7 +58,7 @@ function BreadCrumb(props) {
                 <MenuButton as={Button} size={['sm' , 'md']}>
                     BreadCrumb
                 </MenuButton>
-                <MenuList p='10px' border='none' shadow='none'>
+                <MenuList p='10px' border='none' shadow='none' background='transparent'>
                     <Bcrumb paths={useLocation().pathname} />
                 </MenuList>
             </Menu>

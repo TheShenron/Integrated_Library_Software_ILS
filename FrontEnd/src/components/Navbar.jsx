@@ -2,17 +2,19 @@ import React from 'react';
 import { Avatar, Box, Flex, Heading, Link, Spacer } from "@chakra-ui/react";
 import { NavLink } from 'react-router-dom';
 import Drower from './Drower';
+import favicon from '../img/favicon.png'
 
 function Navbar(props) {
     return (
-        <Box shadow='sm'>
+        <Box shadow='sm' position='fixed' width='100%' backgroundColor='white'>
 
-            <Flex alignItems='center' gap='2' py={['10px', '13px', '15px']} w={['90%', '95%']} m='auto'>
+            <Flex alignItems='center' gap='2' py={['10px', '13px', '15px']} w='95%' m='auto' >
 
-                <Box>
-                    <Heading size='md' display={['none', 'block']}>Library Management System</Heading>
-                    <Heading size='md' display={['block', 'none']}>Lib_System</Heading>
-                </Box>
+                <Flex alignItems='center' gap={'10px'}>
+                    <Avatar src={favicon} name='Goku' size='md'> </Avatar>
+                    <Heading size='md' display={['none', 'block']}> Library Management System</Heading>
+                    <Heading size='md' display={['block', 'none']}>Library Manager</Heading>
+                </Flex>
 
                 <Spacer />
 
