@@ -11,7 +11,7 @@ function Navbar(props) {
             <Flex alignItems='center' gap='2' py={['10px', '13px', '15px']} w='95%' m='auto' >
 
                 <Flex alignItems='center' gap={'10px'}>
-                    <Avatar src={favicon} name='Goku' size='md'> </Avatar>
+                    <Avatar src={favicon} size='md'> </Avatar>
                     <Heading size='md' display={['none', 'block']}> Library Management System</Heading>
                     <Heading size='md' display={['block', 'none']}>Library Manager</Heading>
                 </Flex>
@@ -26,7 +26,7 @@ function Navbar(props) {
                     <Link as={NavLink} to='/career' _activeLink={{ color: "red", textDecoration: 'none' }}>Career</Link>
 
                     <Link as={NavLink} to='/user' style={{ textDecoration: 'none' }}>
-                        <Avatar src='#' name='Goku' size='md' bg='gray.100'> </Avatar>
+                        <Avatar src='#' size='md' bg='gray.200'> </Avatar>
                     </Link>
 
                 </Flex>

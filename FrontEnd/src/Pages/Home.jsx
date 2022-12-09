@@ -1,34 +1,26 @@
 import { Flex } from '@chakra-ui/react';
 import React from 'react';
-import coverIMG from '../img/coverIMG.png'
+import coverimg from '../img/coverimg.jpeg'
 import Login from '../components/Login';
 import Singup from '../components/Singup';
 import CollageDetails from '../components/CollageDetails';
-import { useState } from 'react';
 
-
-function Home(props) {
-
-    const [Itemindex, setItemIndex] = useState(0)
-
-    const handleItem = (ind) => {
-        setItemIndex(ind)
-    }
+function Home({item = 0}) {
 
     let itemList = [
-        <CollageDetails handleItem={handleItem} />,
-        <Login handleItem={handleItem} />,
-        <Singup handleItem={handleItem} />]
+        <CollageDetails />,
+        <Login  />,
+        <Singup />]
 
     return (
-        <Flex width='100%' height='100vh' backgroundImage={coverIMG} justifyContent='center' alignItems='center'>
+        <Flex width='100%' height='100vh' backgroundImage={coverimg} justifyContent='center' alignItems='center'>
 
             <Flex
-                background='white'
+                background='rgba(255,255,255,.8)'
                 width={['95%', '500px', '650px', '700px']}
-                height={['60%', '450px', '450px', '500px']}
+                height={['55%', '400px', '450px']}
                 borderRadius='5px'
-                mt={['20px','30px']}
+                mt={['0px','30px']}
                 flexDirection='column'
                 textAlign='center'
                 justifyContent='center'
@@ -36,7 +28,7 @@ function Home(props) {
                 p={['20px','30px','50px']}
             >
 
-                {itemList[Itemindex]}
+                {itemList[item]}
 
             </Flex>
 

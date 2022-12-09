@@ -1,11 +1,13 @@
+import { Box } from '@chakra-ui/react';
 import React from 'react';
 
 function PageNotFound(props) {
     return (
-        <div>
+        <Box pt='100px'>
             PageNotFound!!
             Redirected to home in 5s
-        </div>
+
+        </Box>
     );
 }
 

@@ -9,7 +9,7 @@ function Drower(props) {
 
     return (
         <div>
-            <Avatar display={['block', 'block', 'none', 'none']} src='#' onClick={onOpen} name='Goku' size='md' bg='gray.100'> </Avatar>
+            <Avatar display={['block', 'block', 'none', 'none']} src='#' onClick={onOpen} size='md' bg='gray.200'> </Avatar>
 
             <Drawer
                 isOpen={isOpen}
@@ -22,8 +22,8 @@ function Drower(props) {
                     <DrawerCloseButton />
                     <DrawerHeader>
                         <Flex alignItems='center' gap={['10px']}>
-                            <Avatar src='#' onClick={onOpen} name='Goku' size='md' bg='gray.100'> </Avatar>
-                            <Text>Gourav</Text>
+                            <Avatar src='#' onClick={onOpen} size='md' bg='gray.200'> </Avatar>
+                            <Text>Guest</Text>
                         </Flex>
                     </DrawerHeader>
 

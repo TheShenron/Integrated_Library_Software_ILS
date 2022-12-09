@@ -13,8 +13,13 @@ function AllRoute(props) {
         <Routes>
 
             <Route path='/' element={<Home />} />
+            <Route path='/u'>
+                <Route index element={<PageNotFound/>}/>
+                <Route path='login' element={<Home item={1}/>}/>
+                <Route path='signup' element={<Home item={2}/>}/>
+            </Route>
             <Route path='/books'>
-                <Route path='' element={<Books />} />
+                <Route index element={<Books />} />
                 <Route path='g' element={<G1 />} />
             </Route>
             <Route path='/about' element={<About />} />
